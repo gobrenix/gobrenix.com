@@ -5708,14 +5708,7 @@ button.btn-floating {
       display: block;
       padding: 1rem 1rem; }
 
-/*!
- * Waves v0.6.0
- * http://fian.my.id/Waves
- *
- * Copyright 2014 Alfiana E. Sibuea and other contributors
- * Released under the MIT license
- * https://github.com/fians/Waves/blob/master/LICENSE
- */
+/*! Waves v0.6.0 - http://fian.my.id/Waves */
 .waves-effect {
   position: relative;
   cursor: pointer;
@@ -7350,10 +7343,7 @@ select {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
 
-/*!
- * Default mobile-first, responsive styling for pickadate.js
- * Demo: http://amsul.github.io/pickadate.js
- */
+/*! Default mobile-first, responsive styling for pickadate.js */
 /**
  * Note: the root picker element should *NOT* be styled more than what's here.
  */

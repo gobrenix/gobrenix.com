@@ -1,1 +1,100 @@
-@primaryColor: #00c853;
+@import 'variables.less';
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    main {
+        flex: 1 0 auto;
+
+        article {
+            ul {
+                list-style: disc;
+                li {
+                    list-style: disc;
+                    margin-left: 16px;
+                }
+            }
+        }
+    }
+
+    form {
+        input[type="submit"] {
+            outline: none;
+        }
+
+        input[type=date]:focus:not([readonly]),
+        input[type=datetime-local]:focus:not([readonly]),
+        input[type=email]:focus:not([readonly]),
+        input[type=number]:focus:not([readonly]),
+        input[type=password]:focus:not([readonly]),
+        input[type=search]:focus:not([readonly]),
+        input[type=tel]:focus:not([readonly]),
+        input[type=text]:focus:not([readonly]),
+        input[type=time]:focus:not([readonly]),
+        input[type=url]:focus:not([readonly]),
+        textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid @primaryColor;
+            box-shadow: 0 1px 0 0 @primaryColor;
+        }
+
+        .waves-input-wrapper {
+            .waves-button-input {
+                position: relative;
+                top: 0;
+                background-color: transparent;
+                border: none;
+                font-style: normal;
+            }
+        }
+    }
+
+    a {
+        color: @primaryColor;
+    }
+
+    // Events plugin rewrite and overwrite
+    #tribe-bar-form {
+        .tribe-bar-submit {
+            input[type=submit] {
+                padding: 0;
+                background-color: transparent;
+            }
+        }
+    }
+
+    #tribe-events {
+        margin-top: 30px;
+    }
+
+    #tribe-events-bar form {
+        webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #tribe-events-content .tribe-events-tooltip h4,
+    #tribe_events_filters_wrapper .tribe_events_slider_val,
+    .single-tribe_events a.tribe-events-gcal,
+    .single-tribe_events a.tribe-events-ical {
+        color: @primaryColor;
+    }
+
+    #tribe-events .tribe-events-button,
+    #tribe_events_filters_wrapper input[type=submit],
+    .tribe-events-button,
+    .tribe-events-button.tribe-inactive,
+    .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-],
+    .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-] > a,
+    .btn {
+        background-color: @primaryColor;
+        height: 100%;
+        -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 6px 0 rgba(0, 0, 0, 0.07);
+        -moz-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 6px 0 rgba(0, 0, 0, 0.07);
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 6px 0 rgba(0, 0, 0, 0.07);
+        &:hover {
+            background-color: @primaryLighten;
+        }
+    }
+}
