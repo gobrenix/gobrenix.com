@@ -1,3 +1,9 @@
+# Wordpress specific
+wp-content/uploads
+
+# OS specific files
+.DS_Store
+
 # Logs
 logs
 *.log
