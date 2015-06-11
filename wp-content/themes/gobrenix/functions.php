@@ -22,24 +22,23 @@ function dashesToCamelCase($string, $capitalizeFirstCharacter = false) {
  * @param  array  $data 	Additional Data
  */
 function component($name, $skin = null, $data = array()) {
-	$prep = str_replace(' ', '', ucwords(str_replace('-', ' ', $name)));
+    $prep = str_replace(' ', '', ucwords(str_replace('-', ' ', $name)));
 	$prep[0] = strtolower($prep[0]);
-	if(is_array($skin)) {
+    if($skin != null && is_array($skin)) {
 		$data = $skin;
 		$skin = null;
-	} else {
+	} else if($skin != null) {
 		$skin[0] = strtoupper($skin[0]);
 		$prep .= $skin;
 	}
-	if(file_exists(get_template_directory() . 'modules/' . $prep . '.php')) {
-		$compCss = $prep.replace(/([A-Z])/g, function($1) {
-			return "-" + $1.toLowerCase();
-		});
-		echo '<div class="component component-' . $compCss . '">\n';
-		include(get_template_directory() . 'modules/' . $prep . '.php');
-		echo '</div>\n';
+    $module_uri = get_template_directory() . '/modules/' . $prep . '/' . $prep . '.php';
+    if(file_exists($module_uri)) {
+        $compCss = strtolower(preg_replace('/([a-zA-Z])(?=[A-Z])/', '$1-', $prep));
+        echo '<div class="component component-' . $compCss . '">';
+            include($module_uri);
+        echo '</div>';
 	} else {
-		echo '<!-- Component "' . $prep . '" was not found -->';
+		echo '<!-- Component "' . $module_uri . '" was not found -->';
 	}
 }
 
