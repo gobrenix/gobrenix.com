@@ -1,14 +1,13 @@
 <?php
 /**
- * Template Name: Portfolio Page
+ * Template Name: Artist Page
  *
- * Displays content for portfolio page layouts
+ * Displays content about an artist
  *
  * @package gobrenix
  */
 
 get_header(); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<?php while (have_posts()) : the_post(); ?>
