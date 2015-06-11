@@ -26,6 +26,7 @@ module.exports = function(grunt) {
                     '<%= pkg.dist %>/app.js': [
                         './assets/js/jquery-*.js',
                         './assets/js/jquery.*.js',
+                        './assets/js/materialize*.js',
                         './assets/js/**/*.js',
                         './modules/**/*.js'
                     ]
@@ -33,7 +34,7 @@ module.exports = function(grunt) {
             }
         },
         less: {
-            production: {
+            prod: {
                 options: {
                     paths: [
                         './assets/css',
@@ -41,11 +42,12 @@ module.exports = function(grunt) {
                     ],
                     plugins: [
                         new (require('less-plugin-autoprefix'))({browsers: ['last 2 versions']}),
-                        new (require('less-plugin-clean-css'))(cleanCssOptions)
+                        new (require('less-plugin-clean-css'))()
                     ]
                 },
                 files: {
                     '<%= pkg.dist %>/app.css': [
+                        './assets/css/materialize*.css',
                         './assets/css/**/*.less',
                         './assets/css/**/*.css',
                         './modules/**/*.less'
@@ -75,6 +77,7 @@ module.exports = function(grunt) {
             },
             css: {
                 files: [
+                    './assets/css/materialize.*.css',
                     './assets/css/**/*.css',
                     './assets/css/**/*.less',
                     './modules/**/*.less'

@@ -1,0 +1,39 @@
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /gobrenix.com/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /gobrenix.com/index.php [L]
+</IfModule>
+# END WordPress
+
+
+# disable hotlinking of images with forbidden or custom image option
+#RewriteEngine on
+#RewriteCond %{HTTP_REFERER} !^$
+#RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?sparringmind.com [NC]
+#RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?google.com [NC]
+#RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?feed.gobrenix.com [NC]
+#RewriteRule \.(jpg|jpeg|png|gif)$ – [NC,F,L]
+
+# An Expires header is a way to specify a time that the clients
+# don’t have to re-fetch any static content (such as images etc).
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html M3600
+    ExpiresByType text/css M3600
+    ExpiresByType application/x-javascript M3600
+    ExpiresByType image/bmp M3600
+    ExpiresByType image/gif M3600
+    ExpiresByType image/x-icon M3600
+    ExpiresByType image/jpeg M3600
+    ExpiresByType image/png A2592000
+    ExpiresByType image/jpg A2592000
+</IfModule>
+
+# Compress I/O over HTTP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/x-javascript text/plain text/xml image/x-icon
+</IfModule>
