@@ -6,12 +6,14 @@ $(document).ready(function() {
     if($('textarea').length > 0) {
         $('textarea').addClass('materialize-textarea');
     }
-
-    var makeButton = function() {
-        $(this).addClass('btn waves-effect');
-    };
-
-    $('input[type=submit]').each(makeButton);
-    $('.button').each(makeButton);
-    $('.tribe-events-button').each(makeButton);
+    
+    [
+        $('input[type=submit]'),
+        $('.tribe-events-button')
+        $('.button')
+    ].forEach(function($btnNode) {
+        $btnNode.each(function() {
+            $(this).addClass('btn waves-effect');
+        });
+    });
 });
