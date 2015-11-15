@@ -1,50 +1,50 @@
 <?php
 /**
- * The base configuration for WordPress
+ * In dieser Datei werden die Grundeinstellungen für WordPress vorgenommen.
  *
- * The wp-config.php creation script uses this file during the
- * installation. You don't have to use the web site, you can
- * copy this file to "wp-config.php" and fill in the values.
+ * Zu diesen Einstellungen gehören: MySQL-Zugangsdaten, Tabellenpräfix,
+ * Secret-Keys, Sprache und ABSPATH. Mehr Informationen zur wp-config.php gibt es
+ * auf der {@link http://codex.wordpress.org/Editing_wp-config.php wp-config.php editieren}
+ * Seite im Codex. Die Informationen für die MySQL-Datenbank bekommst du von deinem Webhoster.
  *
- * This file contains the following configurations:
- *
- * * MySQL settings
- * * Secret keys
- * * Database table prefix
- * * ABSPATH
- *
- * @link https://codex.wordpress.org/Editing_wp-config.php
+ * Diese Datei wird von der wp-config.php-Erzeugungsroutine verwendet. Sie wird ausgeführt,
+ * wenn noch keine wp-config.php (aber eine wp-config-sample.php) vorhanden ist,
+ * und die Installationsroutine (/wp-admin/install.php) aufgerufen wird.
+ * Man kann aber auch direkt in dieser Datei alle Eingaben vornehmen und sie von
+ * wp-config-sample.php in wp-config.php umbenennen und die Installation starten.
  *
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
+/**  MySQL Einstellungen - diese Angaben bekommst du von deinem Webhoster. */
+/**  Ersetze database_name_here mit dem Namen der Datenbank, die du verwenden möchtest. */
 define('DB_NAME', 'database_name_here');
 
-/** MySQL database username */
+/** Ersetze username_here mit deinem MySQL-Datenbank-Benutzernamen */
 define('DB_USER', 'username_here');
 
-/** MySQL database password */
+/** Ersetze password_here mit deinem MySQL-Passwort */
 define('DB_PASSWORD', 'password_here');
 
-/** MySQL hostname */
+/** Ersetze localhost mit der MySQL-Serveradresse */
 define('DB_HOST', 'localhost');
 
-/** Database Charset to use in creating database tables. */
+/** Der Datenbankzeichensatz der beim Erstellen der Datenbanktabellen verwendet werden soll */
 define('DB_CHARSET', 'utf8');
 
-/** The Database Collate type. Don't change this if in doubt. */
+/** Der collate type sollte nicht geändert werden */
 define('DB_COLLATE', '');
 
 /**#@+
- * Authentication Unique Keys and Salts.
+ * Sicherheitsschlüssel
  *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ * Ändere jeden KEY in eine beliebige, möglichst einzigartige Phrase.
+ * Auf der Seite {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * kannst du dir alle KEYS generieren lassen.
+ * Bitte trage für jeden KEY eine eigene Phrase ein. Du kannst die Schlüssel jederzeit wieder ändern,
+ * alle angemeldeten Benutzer müssen sich danach erneut anmelden.
  *
- * @since 2.6.0
+ * @seit 2.6.0
  */
 define('AUTH_KEY',         'put your unique phrase here');
 define('SECURE_AUTH_KEY',  'put your unique phrase here');
@@ -58,10 +58,10 @@ define('NONCE_SALT',       'put your unique phrase here');
 /**#@-*/
 
 /**
- * WordPress Database Table prefix.
+ * WordPress Datenbanktabellen-Präfix
  *
- * You can have multiple installations in one database if you give each
- * a unique prefix. Only numbers, letters, and underscores please!
+ *  Wenn du verschiedene Präfixe benutzt, kannst du innerhalb einer Datenbank
+ *  verschiedene WordPress-Installationen betreiben. Nur Zahlen, Buchstaben und Unterstriche bitte!
  */
 $table_prefix  = 'wp_';
 
@@ -71,11 +71,6 @@ $table_prefix  = 'wp_';
  * Change this to true to enable the display of notices during development.
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
- *
- * For information on other constants that can be used for debugging,
- * visit the Codex.
- *
- * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
 
