@@ -1,13 +1,13 @@
 === WP Smush ===
 Plugin Name: WP Smush
-Version: 2.0.6.1
+Version: 2.1.2
 Author: WPMU DEV
 Author URI: http://premium.wpmudev.org/
 Contributors: WPMUDEV, alexdunae
 Tags: Attachment,Attachments,Compress,Compress Image File,Compress Image Size,Compress JPG,Compressed JPG, Compression Image,Image,Images,JPG,Optimise,Optimize,Photo,Photos,Pictures,PNG,Reduce Image Size,Smush,Smush.it,Upload,WordPress Compression,WordPress Image Tool,Yahoo, Yahoo Smush.it
 Requires at least: 3.5
-Tested up to: 4.2
-Stable tag: 2.0.6.1
+Tested up to: 4.3.1
+Stable tag: 2.1.2
 License: GPL v2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
 Reduce image file sizes, improve performance and boost your SEO using the free <a href="https://premium.wpmudev.org/">WPMU DEV</a> WordPress Smush API.
@@ -59,7 +59,7 @@ Features available to both WP Smush and Pro users include:
 	<li>Use of WPMU DEV's fast and reliable Smush API service.</li>
 	<li>View advanced compression stats per-attachment and library totals.</li>
 </ul>
-Discover for yourself why WP Smush is the most popular free image optimization plugin with more than a million downloads.
+Discover for yourself why WP Smush is the most popular free image optimization plugin with more than two million downloads.
 
 
 == Screenshots ==
@@ -80,6 +80,56 @@ Yahoo's Smush.it API is gone forever. So WPMU DEV built our own free API that is
 
 
 == Changelog ==
+
+= 2.1.2 =
+* Fixed: Important fix for transient issue leading to mutliple api requests
+
+= 2.1.1 =
+* Fixed: Workaround for terrible bug in W3TC file based object caching
+
+= 2.1 =
+* Fixed: Untranslatable strings in settings
+* Fixed: Increased is_pro() API timeouts
+* Fixed: Remove redundant _get_api_key() cache check
+* Fixed: Some PHP notices on fresh installs
+
+= 2.0.7.1 =
+
+* Fixed: Bulk Smush button keeps spinning after 50 images for free version
+* Fixed: NextGen Bulk Smush button issue
+
+= 2.0.7 =
+
+* Fixed: Invalid header issue
+* Fixed: Warnings in file functions
+* Updated: Added limit on query results, for sites with higher image count, Use filter `wp_smush_media_query_limit` to adjust values
+* Added: Sortable WP Smush column in Media Library
+* Added: Filters `wp_smush_media_image` for Media Gallery, `wp_smush_nextgen_image` For NextGen gallery,
+          allows to skip a particular image size from smushing
+* Added: NextGen Gallery support (Pro feature)
+
+= 2.0.6.5 =
+
+* Updated: Skip webp images ( causing ajax error for few sites )
+* Fixed: Warning and Notices ( Media Library not loading )
+* Fixed: Smush full size image if no other sizes are available
+* Added: Detailed text for stats and settings
+
+= 2.0.6.3 =
+
+* Fixed: Change File permission after replacing image
+* Fixed: Directory path for files
+* Fixed: Workaround for Auto Smush issue on Hostgator
+* Fixed: Smush button doesn't works in media library dialog on post screen, when add media is clicked
+		 (https://wordpress.org/support/topic/like-wp-smush-a-lot)
+* New:   Show number of images smushed in stats column
+* Added: Support for WP Retina 2x Plugin
+* Added: Filter `WP_SMUSH_API_TIMEOUT` to change the default time out value from 60s
+* Added: Smush original image option (Pro Only)
+
+= 2.0.6.2 =
+
+* Use string for text domain instead of PHP Constant ( WordPress Guideline )
 
 = 2.0.6.1 =
 
