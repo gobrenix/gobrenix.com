@@ -195,7 +195,7 @@ function wpmem_update_fields( $action ) {
 		$reserved_terms = wpmem_wp_reserved_terms();
 		$submitted_term = $_POST['add_option'];
 		if ( in_array( strtolower( $submitted_term ), $reserved_terms ) ) {
-			$add_field_err_msg = sprintf( __( 'Sorry, "%s" is a <a href="http://codex.wordpress.org/Function_Reference/register_taxonomy#Reserved_Terms" target="_blank">reserved term</a>. Field was not added.', 'wp-members' ), $submitted_term );
+			$add_field_err_msg = sprintf( __( 'Sorry, "%s" is a <a href="https://codex.wordpress.org/Function_Reference/register_taxonomy#Reserved_Terms" target="_blank">reserved term</a>. Field was not added.', 'wp-members' ), $submitted_term );
 		}
 
 		// Error check option name for spaces and replace with underscores.
@@ -535,7 +535,7 @@ function wpmem_a_field_table( $wpmem_fields ) {
 								<?php echo ( ( $wpmem_ut_fields ) && ( in_array( 'Registration IP', $wpmem_ut_fields ) ) ) ? 'checked' : false; ?> />
 						</td>
 					</tr>
-				<?php if ( $wpmem->use_exp == 1 ) { ?>
+				<?php if ( defined( 'WPMEM_EXP_MODULE' ) && $wpmem->use_exp == 1 ) { ?>
 					<tr class="nodrag nodrop">
 						<td>&nbsp;</td>
 						<td><i>Subscription Type</i></td>

@@ -34,6 +34,7 @@ add_action( 'admin_footer-edit.php', 'wpmem_bulk_posts_action'   );
 add_action( 'load-edit.php',         'wpmem_posts_page_load'     );
 add_action( 'admin_notices',         'wpmem_posts_admin_notices' );
 add_action( 'load-post.php',         'wpmem_load_tinymce'        );
+add_action( 'load-post-new.php',     'wpmem_load_tinymce'        );
 
 
 /**
@@ -303,7 +304,6 @@ function wpmem_post_columns( $columns ) {
 	$post_type = ( isset( $_REQUEST['post_type'] ) ) ? $_REQUEST['post_type'] : 'post';
 	
 	if ( $post_type == 'page' || $post_type == 'post' ) { // @todo - holding off on CPT support.
-		wp_enqueue_style ( 'wpmem-admin-css', WPMEM_DIR . '/css/admin.css', '', WPMEM_VERSION );
 		$columns['wpmem_block'] = ( $wpmem->block[ $post_type ] == 1 ) ? __( 'Unblocked?', 'wp-members' ) : __( 'Blocked?', 'wp-members' );
 	}
 	return $columns;
@@ -350,7 +350,7 @@ function wpmem_load_tinymce() {
 	// @todo For now, only load if WP version is high enough.
 	if ( version_compare( get_bloginfo( 'version' ), '3.9', '>=' ) ) {
 		global $wpmem_shortcode;
-		include( WPMEM_PATH . 'inc/class-wp-members-tinymce-buttons.php' );
+		include( WPMEM_PATH . 'admin/includes/class-wp-members-tinymce-buttons.php' );
 		$wpmem_shortcode = new WP_Members_TinyMCE_Buttons;
 	}
 }

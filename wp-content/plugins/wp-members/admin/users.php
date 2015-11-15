@@ -238,13 +238,13 @@ function wpmem_users_views( $views ) {
 	global $wpmem;
 
 	$arr = array();
-	if ( $wpmem->use_exp == 1 ) {
+	if ( defined( 'WPMEM_EXP_MODULE' ) && $wpmem->use_exp == 1 ) {
 		$arr[] = 'Pending';
 	}
 	if ( $wpmem->use_trial == 1 ) {
 		$arr[] = 'Trial';
 	}
-	if ( $wpmem->use_exp == 1 ) {
+	if ( defined( 'WPMEM_EXP_MODULE' ) && $wpmem->use_exp == 1 ) {
 		$arr[] = 'Subscription';
 		$arr[] = 'Expired';
 	}
@@ -298,9 +298,10 @@ function wpmem_add_user_column( $columns ) {
 
 		$columns = array_merge( $columns, $wpmem_user_columns );
 	}
-
-	// @todo - needs to be debugged for use with external process custom columns.
-	// require_once( WPMEM_PATH . 'inc/class-wp-members-sortable-user-columns.php' );
+	
+	// Makes WP-Members columns sortable.
+	// @todo - finish debugging class or add sortable functions to users.php.
+	// require_once( WPMEM_PATH . 'admin/includes/class-wp-members-sortable-user-columns.php' );
 	// new WP_Members_Sortable_User_Columns( $wpmem_user_columns );
 
 	return $columns;

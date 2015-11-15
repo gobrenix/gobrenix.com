@@ -1,41 +1,34 @@
+# Copyright (C) 2015 WP-Members
+# This file is distributed under the same license as the WP-Members package.
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: WP-Members 3.0.5\n"
-"POT-Creation-Date: 2015-09-28 16:50-0500\n"
-"PO-Revision-Date: 2015-09-28 16:47-0500\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"Project-Id-Version: WP-Members 3.0.7.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-members\n"
+"POT-Creation-Date: 2015-11-12 14:51:58+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.5\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-WPHeader: wp-members.php\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: admin/admin.php:71 admin/admin.php:138
+#: admin/admin.php:78 admin/admin.php:153
 msgid "Settings"
 msgstr ""
 
-#: admin/admin.php:206
+#: admin/admin.php:230
 msgid "Options"
 msgstr ""
 
-#: admin/admin.php:207
+#: admin/admin.php:231
 msgid "Fields"
 msgstr ""
 
-#: admin/admin.php:208
+#: admin/admin.php:232
 msgid "Dialogs"
 msgstr ""
 
-#: admin/admin.php:209
+#: admin/admin.php:233
 msgid "Emails"
 msgstr ""
 
@@ -46,7 +39,6 @@ msgid ""
 msgstr ""
 
 #: admin/dialogs.php:106
-#, php-format
 msgid ""
 "You can %s change this here %s making sure the box next to \"Anyone can "
 "register\" is unchecked."
@@ -69,7 +61,6 @@ msgid ""
 msgstr ""
 
 #: admin/dialogs.php:112
-#, php-format
 msgid ""
 "You can %s change this here %s by checking the box next to \"Users must be "
 "registered and logged in to comment.\""
@@ -90,7 +81,6 @@ msgid ""
 msgstr ""
 
 #: admin/dialogs.php:118
-#, php-format
 msgid ""
 "You can %s change this here %s by changing \"For each article in a feed, show"
 "\" to \"Summary.\""
@@ -178,19 +168,15 @@ msgstr ""
 msgid "Unblock"
 msgstr ""
 
-#: admin/post.php:178
-msgid " Restriction"
-msgstr ""
-
-#: admin/post.php:308
+#: admin/post.php:307
 msgid "Unblocked?"
 msgstr ""
 
-#: admin/post.php:308
+#: admin/post.php:307
 msgid "Blocked?"
 msgstr ""
 
-#: admin/post.php:339 admin/post.php:340 admin/user-export.php:112
+#: admin/post.php:338 admin/post.php:339 admin/user-export.php:112
 msgid "Yes"
 msgstr ""
 
@@ -210,7 +196,6 @@ msgid ""
 msgstr ""
 
 #: admin/tab-captcha.php:68
-#, php-format
 msgid ""
 "reCAPTCHA asks commenters to retype two words scanned from a book to prove "
 "that they are a human. This verifies that they are not a spambot while also "
@@ -224,7 +209,6 @@ msgid "reCAPTCHA Keys"
 msgstr ""
 
 #: admin/tab-captcha.php:75
-#, php-format
 msgid ""
 "reCAPTCHA requires an API key, consisting of a \"public\" and a \"private\" "
 "key. You can sign up for a %s free reCAPTCHA key%s"
@@ -259,7 +243,6 @@ msgid "Clean"
 msgstr ""
 
 #: admin/tab-captcha.php:101
-#, php-format
 msgid ""
 "reCAPTCHA requires an API key, consisting of a \"site\" and a \"secret\" "
 "key. You can sign up for a %s free reCAPTCHA key%s"
@@ -368,7 +351,6 @@ msgid "Dialogs and Error Messages"
 msgstr ""
 
 #: admin/tab-dialogs.php:60
-#, php-format
 msgid ""
 "You can customize the text for dialogs and error messages. Simple HTML is "
 "allowed %s etc."
@@ -471,9 +453,8 @@ msgid "A field with that option name already exists"
 msgstr ""
 
 #: admin/tab-fields.php:198
-#, php-format
 msgid ""
-"Sorry, \"%s\" is a <a href=\"http://codex.wordpress.org/Function_Reference/"
+"Sorry, \"%s\" is a <a href=\"https://codex.wordpress.org/Function_Reference/"
 "register_taxonomy#Reserved_Terms\" target=\"_blank\">reserved term</a>. "
 "Field was not added."
 msgstr ""
@@ -699,7 +680,6 @@ msgid "Notify admin"
 msgstr ""
 
 #: admin/tab-options.php:137
-#, php-format
 msgid "Notify %s for each new registration? %s"
 msgstr ""
 
@@ -881,20 +861,19 @@ msgstr ""
 msgid "Redirect to (optional):"
 msgstr ""
 
-#: inc/class-wp-members.php:329 inc/shortcodes.php:95 inc/shortcodes.php:392
+#: inc/class-wp-members.php:352 inc/shortcodes.php:113 inc/shortcodes.php:415
 msgid "There was an error with the CAPTCHA form."
 msgstr ""
 
-#: inc/core.php:100
+#: inc/core.php:106
 msgid "<strong>ERROR</strong>: User has not been activated."
 msgstr ""
 
-#: inc/core.php:472 inc/register.php:88
-#, php-format
+#: inc/core.php:502 inc/register.php:88
 msgid "Sorry, %s is a required field."
 msgstr ""
 
-#: inc/core.php:490 inc/forms.php:526 inc/sidebar.php:188
+#: inc/core.php:522 inc/forms.php:525 inc/sidebar.php:188
 msgid "Register"
 msgstr ""
 
@@ -914,13 +893,12 @@ msgstr ""
 msgid "Edit My Information"
 msgstr ""
 
-#: inc/dialogs.php:197 inc/forms.php:163
+#: inc/dialogs.php:197 inc/forms.php:164
 msgid "Change Password"
 msgstr ""
 
 #: inc/dialogs.php:211 inc/dialogs.php:232 inc/dialogs.php:268
 #: inc/sidebar.php:46 inc/sidebar.php:242
-#, php-format
 msgid "You are logged in as %s"
 msgstr ""
 
@@ -944,96 +922,95 @@ msgstr ""
 msgid "Password fields cannot be empty"
 msgstr ""
 
-#: inc/dialogs.php:384 inc/shortcodes.php:434
+#: inc/dialogs.php:384 inc/shortcodes.php:457
 msgid "Edit Your Information"
 msgstr ""
 
-#: inc/forms.php:71 inc/forms.php:204 inc/forms.php:558 inc/sidebar.php:137
+#: inc/forms.php:74 inc/forms.php:203 inc/forms.php:557 inc/sidebar.php:137
 msgid "Username"
 msgstr ""
 
-#: inc/forms.php:78 inc/sidebar.php:143 string stored in database
+#: inc/forms.php:81 inc/sidebar.php:143
 msgid "Password"
 msgstr ""
 
-#: inc/forms.php:96
+#: inc/forms.php:99
 msgid "Existing Users Log In"
 msgstr ""
 
-#: inc/forms.php:98
+#: inc/forms.php:101
 msgid "Log In"
 msgstr ""
 
-#: inc/forms.php:138
+#: inc/forms.php:139
 msgid "New password"
 msgstr ""
 
-#: inc/forms.php:145
+#: inc/forms.php:146
 msgid "Confirm new password"
 msgstr ""
 
-#: inc/forms.php:165
+#: inc/forms.php:166
 msgid "Update Password"
 msgstr ""
 
-#: inc/forms.php:211 string stored in database
+#: inc/forms.php:210
 msgid "Email"
 msgstr ""
 
-#: inc/forms.php:229
+#: inc/forms.php:228
 msgid "Reset Forgotten Password"
 msgstr ""
 
-#: inc/forms.php:231
+#: inc/forms.php:230
 msgid "Reset Password"
 msgstr ""
 
-#: inc/forms.php:379
+#: inc/forms.php:378
 msgid "Remember Me"
 msgstr ""
 
-#: inc/forms.php:407
+#: inc/forms.php:406
 msgid "Forgot password?"
 msgstr ""
 
-#: inc/forms.php:407
+#: inc/forms.php:406
 msgid "Click here to reset"
 msgstr ""
 
-#: inc/forms.php:422
+#: inc/forms.php:421
 msgid "New User?"
 msgstr ""
 
-#: inc/forms.php:422
+#: inc/forms.php:421
 msgid "Click here to register"
 msgstr ""
 
-#: inc/forms.php:519
+#: inc/forms.php:518
 msgid "Required field"
 msgstr ""
 
-#: inc/forms.php:525
+#: inc/forms.php:524
 msgid "Reset Form"
 msgstr ""
 
-#: inc/forms.php:527
+#: inc/forms.php:526
 msgid "Update Profile"
 msgstr ""
 
-#: inc/forms.php:565
+#: inc/forms.php:564
 msgid "Choose a Username"
 msgstr ""
 
-#: inc/forms.php:687 inc/wp-registration.php:67
-#, php-format
+#: inc/forms.php:690 inc/wp-registration.php:67
 msgid "Please indicate that you agree to the %s TOS %s"
 msgstr ""
 
-#: inc/forms.php:857
+#: inc/forms.php:860
 msgid "New User Registration"
 msgstr ""
 
-#: inc/forms.php:1049
+#: inc/forms.php:1053
 msgid "Input the code:"
 msgstr ""
 
@@ -1102,7 +1079,7 @@ msgstr ""
 msgid "You have entered an incorrect code value. Please try again."
 msgstr ""
 
-#: inc/shortcodes.php:353
+#: inc/shortcodes.php:375
 msgid "Click here to log out."
 msgstr ""
 
@@ -1139,170 +1116,19 @@ msgid "Terms of Service"
 msgstr ""
 
 #: wp-members-tos.php:36
-#, php-format
 msgid "%sclose%s"
 msgstr ""
 
 #: wp-members-tos.php:38
-#, php-format
 msgid "%sprint%s"
 msgstr ""
 
-#: string stored in database
-msgid "First Name"
+#. Plugin Name of the plugin/theme
+msgid "WP-Members"
 msgstr ""
 
-#: string stored in database
-msgid "Last Name"
-msgstr ""
-
-#: string stored in database
-msgid "Address 1"
-msgstr ""
-
-#: string stored in database
-msgid "Address 2"
-msgstr ""
-
-#: string stored in database
-msgid "City"
-msgstr ""
-
-#: string stored in database
-msgid "State"
-msgstr ""
-
-#: string stored in database
-msgid "Zip"
-msgstr ""
-
-#: string stored in database
-msgid "Country"
-msgstr ""
-
-#: string stored in database
-msgid "Day Phone"
-msgstr ""
-
-#: string stored in database
-msgid "Confirm Email"
-msgstr ""
-
-#: string stored in database
-msgid "Website"
-msgstr ""
-
-#: string stored in database
-msgid "Biographical Info"
-msgstr ""
-
-#: string stored in database
-msgid "Confirm Password"
-msgstr ""
-
-#: string stored in database
-msgid "TOS"
-msgstr ""
-
-#: string stored in database
-msgid "This content is restricted to site members.  If you are an existing user, please log in.  New users may register below."
-msgstr ""
-			
-#: string stored in database
-msgid "Sorry, that username is taken, please try another."
-msgstr ""
-
-#: string stored in database
-msgid "Sorry, that email address already has an account.<br />Please try another."
-msgstr ""
-
-#: string stored in database
-msgid "Congratulations! Your registration was successful.<br /><br />You may now log in using the password that was emailed to you."
-msgstr ""
-
-#: string stored in database
-msgid "Your information was updated!"
-msgstr ""
-
-#: string stored in database
-msgid "Passwords did not match.<br /><br />Please try again."
-msgstr ""
-
-#: string stored in database
-msgid "Password successfully changed!"
-msgstr ""
-
-#: string stored in database
-msgid "Either the username or email address do not exist in our records."
-msgstr ""
-
-#: string stored in database
-msgid "Password successfully reset!<br /><br />An email containing a new password has been sent to the email address on file for your account."
-msgstr ""
-
-#: admin/post.php: may be deprecated
-#, php-format
-msgid "%s posts %sed."
-msgstr ""
-
-#: wp-members-install.php: may be deprecated
-msgid "AIM"
-msgstr "AIM"
-
-#: admin/tab-options.php: may be deprecated
-msgid "Block Posts by default"
-msgstr ""
-
-#: admin/tab-options.php: may be deprecated
-msgid "Block Pages by default"
-msgstr ""
-
-#: admin/tab-options.php: may be deprecated
-msgid "Hide registration"
-msgstr ""
-
-#: wp-members-install.php: may be deprecated
-msgid "Jabber/Google Talk"
-msgstr ""
-
-#: admin/tab-options.php: may be deprecated
-msgid "Note: Posts can still be individually blocked or unblocked at the article level"
-msgstr ""
-
-#: admin/tab-options.php: may be deprecated
-msgid "Note: Pages can still be individually blocked or unblocked at the article level"
-msgstr ""
-
-#: admin/post.php: may be deprecated
-msgid "Page Restriction"
-msgstr ""
-
-#: admin/post.php: may be deprecated
-msgid "Post Restriction"
-msgstr ""
-
-#: admin/tab-options.php: may be deprecated
-msgid "Removes the registration form from blocked content"
-msgstr ""
-
-#: admin/tab-options.php: may be deprecated
-msgid "Select a stylesheet or specify a custom stylesheet below"
-msgstr ""
-
-#: admin/tab-options.php: may be deprecated
-msgid "Show excerpts"
-msgstr ""
-
-#: admin/tab-options.php: may be deprecated
-msgid "Shows excerpted content above the login/registration on both Posts and Pages"
-msgstr ""
-
-#: admin/tab-options.php: may be deprecated
-msgid "Turns on CAPTCHA for registration"
-msgstr ""
-
-#: wp-members-install.php: may be deprecated
-msgid "Yahoo IM"
+#. Plugin URI of the plugin/theme
+msgid "http://rocketgeek.com"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -1312,4 +1138,12 @@ msgid ""
 "guide/\">the online Users Guide</a>. A <a href=\"http://rocketgeek.com/"
 "plugins/wp-members/quick-start-guide/\">Quick Start Guide</a> is also "
 "available. WP-Members(tm) is a trademark of butlerblog.com."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Chad Butler"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://butlerblog.com/"
 msgstr ""
