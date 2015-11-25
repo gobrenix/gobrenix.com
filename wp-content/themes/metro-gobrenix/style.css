@@ -1,0 +1,249 @@
+/*
+Theme Name: Gobrenix Metro
+Description: A basic Metro extension from "Metro Creative X" with Store support and more features
+Author: Jan Biasi
+Author URI: http://janbiasi.ch/
+Template: metro-creativex
+Version: 1.0
+Tags: gobrenix, metro, creativex, goa, prog, ui, modern, flatdesign
+*/
+
+@import url('../metro-creativex/style.css');
+
+/* Default overrides of native html elements */
+select {
+	border: 1px solid #fff;
+    background: transparent;
+    background-color: #fff;
+    width: auto;
+    padding: 7px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Overwrite Customization details */
+p, span {
+	color: #fff;
+}
+
+#topside .pages ul a {
+    color: #3bd37d;
+}
+
+#topside .pages ul a:hover {
+    color: #7ed3a3;
+}
+
+.left-sidebar li {
+    list-style: none;
+    float: left;
+    width: 100%;
+    min-height: 5rem;
+    line-height: 5rem;
+    font-size: 1.7rem;
+    display: block;
+    border-top: 1px solid #353535;
+    border-bottom: 1px solid #141414;
+    color: #929291;
+}
+
+.bg-code {
+    background: #3bd37d;
+}
+
+/* Content sizing and adjustments */
+div#content {
+	height: auto !important;
+}
+
+/*= CUSTOM STYLES FOR WOOCOMMERCE IMPLEMENT BY JAN BIASI */
+#fsb-social-bar {
+	background-color: transparent !important;
+	border: none !important;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+	font-size: inherit;
+	padding: 12px;
+}
+
+.woocommerce .woocommerce-error {
+	font-size: 16px;
+}
+
+.woocommerce .quantity .qty {
+    width: 3.631em;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.woocommerce .product_meta {
+	margin-top: 30px;
+}
+
+.woocommerce .post img {
+	width: 50%;
+	margin: 0 25%;
+}
+
+.woocommerce .addresses .address header,
+.woocommerce .addresses .address address {
+	display: block;
+	width: 100%;
+}
+
+.woocommerce ul.products {
+	width: 100%;
+	overflow: hidden;
+}
+
+.woocommerce ul.products li {
+	float: left;
+	background-color: transparent;
+	width: 45%;
+    padding: 2.5%;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.woocommerce ul.products li img {
+	border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 0 auto;
+}
+
+.woocommerce ul.products h3 {
+	display: block;
+	font-size: 17px;
+	color: #fff;
+}
+
+.woocommerce ul.products a.button {
+	will-change: background-color;
+	transition: background-color .2s linear;
+	-moz-transition: background-color .2s linear;
+	-webkit-transition: background-color .2s linear;
+    font-size: 14px !important;
+	color: #000 !important;
+	display: block;
+	text-align: center;
+	font-size: inherit;
+	max-width: 300px;
+	margin: 20px auto 0 auto;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	will-change: background-color;
+	transition: background-color .2s linear;
+	-moz-transition: background-color .2s linear;
+	-webkit-transition: background-color .2s linear;
+	background-color: #3bd37d;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: #7ed3a3;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+	font-size: 15px;
+	margin-top: 70px;
+}
+
+.single-product .woocommerce .woocommerce-breadcrumb {
+	margin-bottom: 65px;
+}
+
+/* Ninja generated forms override */
+.ninja-forms-form-wrap {
+
+}
+
+.ninja-forms-form-wrap input[type="text"],
+.ninja-forms-form-wrap input[type="number"],
+.ninja-forms-form-wrap input[type="email"],
+.ninja-forms-form-wrap input[type="password"],
+.ninja-forms-form-wrap input[type="telephone"] {
+	border: 1px solid #fff;
+	background: transparent;
+	background-color: #fff;
+	width: auto;
+	padding: 7px;
+	font-size: 12px;
+	border: 1px solid #ccc;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+/* Responsive overrides */
+@media only screen and (max-width: 768px) {
+	.navrespgradient {
+		display: none;
+	}
+
+	header #logo,
+	header .logo {
+		display: block;
+		margin: 30px auto 0 auto !important;
+	}
+
+	#topside .pages {
+		display: none !important;
+	}
+
+	#content article .post_content a {
+		line-height: 5rem;
+    	margin-left: 50px;
+	}
+
+	footer .alignright {
+		display: none !important;
+	}
+
+	.left-sidebar.sidebar-mobile aside:last-of-type {
+		margin-bottom: 20px;
+	}
+
+	.widget.tribe-events-list-widget p {
+		font-size: 14px;
+	}
+
+	.left-sidebar.widget_tag_cloud a {
+		font-size: 13px;
+	}
+
+	/* Comment response button :submit sizing */
+	#respond #submit {
+    	color: #fff;
+    	background: #333330;
+    	display: block;
+    	width: 100%;
+	}
+}
+
+/* Large screens overrides */
+@media all and (min-width: 1600px) {
+	.woocommerce ul.products li {
+		width: 20%;
+	    padding: 2.5%;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+}

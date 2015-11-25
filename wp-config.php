@@ -14,24 +14,68 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'gx_gobrenix_com');
+ // Weburl resp. path for live server
+ $server_www_path = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
-/** MySQL database username */
-define('DB_USER', 'gx_site_admin');
+if(strpos($server_www_path, 'localhost')) {
+	/**
+	 * For developers: WordPress debugging mode.
+	 *
+	 * Change this to true to enable the display of notices during development.
+	 * It is strongly recommended that plugin and theme developers use WP_DEBUG
+	 * in their development environments.
+	 */
+	define('WP_DEBUG', true);
 
-/** MySQL database password */
-define('DB_PASSWORD', '5ddjGjy5yrLUcjLa');
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'gx_gobrenix_com');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+	/** MySQL database username */
+	define('DB_USER', 'gx_site_admin');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', '5ddjGjy5yrLUcjLa');
+
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
+
+	/**
+	 * WordPress Database Table prefix.
+	 *
+	 * You can have multiple installations in one database if you give each a unique
+	 * prefix. Only numbers, letters, and underscores please!
+	 */
+	$table_prefix  = 'gx_';
+} else if(strpos($server_www_path, 'gobrenix.com')) {
+	/** Disable debug mode on live server(s) */
+	define('WP_DEBUG', false);
+
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'gobrenix_wpcluster01');
+
+	/** MySQL database username */
+	define('DB_USER', 'gobrenix_cmsadm');
+
+	/** MySQL database password */
+	define('DB_PASSWORD', 'cTchktnB#01');
+
+	/** MySQL hostname */
+	define('DB_HOST', 'gobrenix.mysql.db.internal');
+
+	/** Table prefix for live */
+	$table_prefix  = 'gx_';
+}
+
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE', '');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
 
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+/** Increase the Memory Limit due the shop recommended settings */
+define('WP_MEMORY_LIMIT', '64M');
+
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -51,30 +95,10 @@ define('SECURE_AUTH_SALT', '%h(/--?WDJv{{sW!r&82gcn#D:C|t#VPj~e0GZ/$Ee.tTiNLhzO@
 define('LOGGED_IN_SALT',   'O <=!,xe7|u3]y.-</[&@a%--i0)z^b*-+{cY}h#3!-{C9N_>={}J]_]D)q{{uut');
 define('NONCE_SALT',       'J!}$&,`j)osliv>,^p}--.OSQ,|g,rq!?zK,+^B^b+H*78bM|*|0=Y!/(I%4A%}7');
 
-/**#@-*/
-
-/**
- * WordPress Database Table prefix.
- *
- * You can have multiple installations in one database if you give each a unique
- * prefix. Only numbers, letters, and underscores please!
- */
-$table_prefix  = 'gx_';
-
-/**
- * For developers: WordPress debugging mode.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
- */
-define('WP_DEBUG', false);
-
-/* That's all, stop editing! Happy blogging. */
-
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
+if (!defined('ABSPATH')) {
 	define('ABSPATH', dirname(__FILE__) . '/');
+}
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

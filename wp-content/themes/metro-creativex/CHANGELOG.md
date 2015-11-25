@@ -1,5 +1,13 @@
 
 
+### 1.3.6 - 20/11/2015
+
+ Changes: 
+
+
+ * Fixed #26 The number of articles displayed wrong in Firefox
+
+
 ### 1.3.5 - 08/09/2015
 
  Changes: 
